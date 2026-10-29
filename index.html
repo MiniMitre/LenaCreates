@@ -4,615 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f8f6f1" />
-    <meta
-      name="description"
-      content="Shop art prints by Lena Creates — colorful, thoughtful artwork made to bring a little wonder home."
-    />
-    <title>Lena Creates — Art for the everyday</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap");
-      :root {
-        --paper: #f8f6f1;
-        --ink: #25251f;
-        --muted: #77766e;
-        --coral: #e98166;
-        --green: #536b4d;
-        --line: #e6e2d9;
-        --serif: "Playfair Display", Georgia, serif;
-        --sans: "DM Sans", Arial, sans-serif;
-      }
-      * {
-        box-sizing: border-box;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        margin: 0;
-        background: var(--paper);
-        color: var(--ink);
-        font-family: var(--sans);
-        -webkit-font-smoothing: antialiased;
-      }
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-      button {
-        font: inherit;
-        color: inherit;
-      }
-      .announcement {
-        background: var(--green);
-        color: white;
-        text-align: center;
-        padding: 10px 16px;
-        font-size: 11px;
-        letter-spacing: 0.11em;
-        text-transform: uppercase;
-      }
-      .header {
-        height: 79px;
-        padding: 0 6.2%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-bottom: 1px solid var(--line);
-        position: sticky;
-        top: 0;
-        background: rgba(248, 246, 241, 0.96);
-        backdrop-filter: blur(12px);
-        z-index: 5;
-      }
-      .brand {
-        font-family: var(--serif);
-        font-size: 25px;
-        letter-spacing: -0.7px;
-      }
-      .brand span {
-        color: var(--coral);
-      }
-      .nav {
-        display: flex;
-        gap: 34px;
-        align-items: center;
-        font-size: 12px;
-      }
-      .nav a {
-        transition: color 0.2s;
-      }
-      .nav a:hover,
-      .text-link:hover {
-        color: var(--coral);
-      }
-      .cart {
-        border: 1px solid var(--ink);
-        background: none;
-        padding: 10px 16px;
-        border-radius: 99px;
-        font-size: 11px;
-        cursor: pointer;
-        transition: 0.2s;
-      }
-      .cart:hover {
-        background: var(--ink);
-        color: white;
-      }
-      .hero {
-        max-width: 1390px;
-        margin: auto;
-        padding: 62px 6.2% 74px;
-        display: grid;
-        grid-template-columns: 1fr 1.03fr;
-        gap: 7%;
-        align-items: center;
-        min-height: 565px;
-      }
-      .eyebrow {
-        font-size: 10px;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        color: var(--green);
-        font-weight: 700;
-      }
-      .hero h1 {
-        font: 500 clamp(43px, 6.1vw, 77px)/1.07 var(--serif);
-        letter-spacing: -2.8px;
-        margin: 18px 0 20px;
-        max-width: 520px;
-      }
-      .hero h1 em {
-        color: var(--coral);
-        font-weight: 500;
-      }
-      .hero-copy {
-        font-size: 14px;
-        line-height: 1.9;
-        color: #6b6a62;
-        max-width: 390px;
-      }
-      .primary {
-        display: inline-flex;
-        align-items: center;
-        gap: 20px;
-        background: var(--ink);
-        color: white;
-        border: 0;
-        border-radius: 99px;
-        padding: 15px 22px;
-        margin-top: 22px;
-        font-size: 12px;
-        cursor: pointer;
-        transition:
-          transform 0.2s,
-          background 0.2s;
-      }
-      .primary:hover {
-        background: var(--green);
-        transform: translateY(-2px);
-      }
-      .hero-note {
-        margin-top: 24px;
-        color: var(--muted);
-        font-size: 10px;
-        letter-spacing: 0.04em;
-      }
-      .hero-art {
-        position: relative;
-        min-height: 406px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .hero-art:before {
-        content: "";
-        position: absolute;
-        width: 84%;
-        height: 84%;
-        border-radius: 50%;
-        background: #eeebe2;
-      }
-      .frame {
-        position: relative;
-        background: #fff;
-        padding: 13px 13px 37px;
-        box-shadow: 0 18px 45px #28271d20;
-        transform: rotate(3deg);
-        width: min(75%, 365px);
-        z-index: 1;
-      }
-      .artwork {
-        aspect-ratio: 4/5;
-        overflow: hidden;
-        position: relative;
-        background: #edb99b;
-      }
-      .artwork svg {
-        width: 100%;
-        height: 100%;
-        display: block;
-      }
-      .frame-caption {
-        position: absolute;
-        bottom: 11px;
-        left: 15px;
-        font: italic 11px var(--serif);
-        color: #4b4942;
-      }
-      .spark {
-        position: absolute;
-        z-index: 2;
-        color: var(--coral);
-        font: 32px var(--serif);
-        top: 8%;
-        right: 9%;
-      }
-      .stamp {
-        position: absolute;
-        z-index: 2;
-        bottom: 13%;
-        left: 0;
-        background: var(--green);
-        color: #fff;
-        border-radius: 50%;
-        width: 82px;
-        height: 82px;
-        display: grid;
-        place-items: center;
-        text-align: center;
-        font-size: 9px;
-        line-height: 1.5;
-        letter-spacing: 0.1em;
-        transform: rotate(-11deg);
-      }
-      .section {
-        padding: 74px 6.2% 88px;
-        max-width: 1390px;
-        margin: auto;
-      }
-      .section-head {
-        display: flex;
-        align-items: end;
-        justify-content: space-between;
-        margin-bottom: 28px;
-      }
-      .section h2 {
-        font: 500 clamp(33px, 4vw, 47px)/1.1 var(--serif);
-        letter-spacing: -1.3px;
-        margin: 10px 0 0;
-      }
-      .text-link {
-        font-size: 12px;
-        border-bottom: 1px solid var(--coral);
-        padding-bottom: 5px;
-        transition: color 0.2s;
-      }
-      .filters {
-        display: flex;
-        gap: 9px;
-        margin: 0 0 27px;
-      }
-      .filter {
-        border: 1px solid var(--line);
-        background: transparent;
-        border-radius: 30px;
-        padding: 9px 16px;
-        font-size: 10px;
-        color: #68675f;
-        cursor: pointer;
-      }
-      .filter.active,
-      .filter:hover {
-        background: var(--ink);
-        color: white;
-        border-color: var(--ink);
-      }
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 22px;
-      }
-      .product {
-        min-width: 0;
-      }
-      .product.hidden {
-        display: none;
-      }
-      .product-image {
-        background: #eee9df;
-        padding: 12px;
-        position: relative;
-        overflow: hidden;
-      }
-      .product-image .artwork {
-        width: 100%;
-        box-shadow: 0 5px 14px #201d191c;
-        transition: transform 0.4s;
-      }
-      .product:hover .product-image .artwork {
-        transform: scale(1.025);
-      }
-      .product-image .artwork svg {
-        aspect-ratio: 4/5;
-      }
-      .badge {
-        position: absolute;
-        left: 20px;
-        top: 20px;
-        background: var(--paper);
-        padding: 7px 10px;
-        font-size: 8px;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        z-index: 2;
-      }
-      .product-info {
-        padding: 13px 1px;
-        display: flex;
-        justify-content: space-between;
-        gap: 8px;
-        align-items: start;
-      }
-      .product-name {
-        font: 500 17px var(--serif);
-      }
-      .product-meta {
-        color: var(--muted);
-        font-size: 10px;
-        margin-top: 5px;
-      }
-      .price {
-        font-size: 12px;
-        white-space: nowrap;
-        margin-top: 3px;
-      }
-      .story {
-        background: #e8e8dc;
-        padding: 76px 6.2%;
-      }
-      .story-inner {
-        max-width: 1120px;
-        margin: auto;
-        display: grid;
-        grid-template-columns: 0.95fr 1fr;
-        gap: 11%;
-        align-items: center;
-      }
-      .story-art {
-        height: 330px;
-        background: #d5d9c8;
-        position: relative;
-        overflow: hidden;
-      }
-      .story-art svg {
-        width: 100%;
-        height: 100%;
-      }
-      .story-copy h2 {
-        font: 500 clamp(34px, 4vw, 49px)/1.15 var(--serif);
-        letter-spacing: -1px;
-        margin: 15px 0;
-      }
-      .story-copy p {
-        font-size: 13px;
-        line-height: 1.9;
-        color: #69695f;
-        max-width: 410px;
-      }
-      .story-copy .text-link {
-        display: inline-block;
-        margin-top: 15px;
-      }
-      .quote {
-        padding: 78px 20px;
-        text-align: center;
-      }
-      .quote blockquote {
-        font: italic 25px/1.5 var(--serif);
-        max-width: 720px;
-        margin: 0 auto 15px;
-      }
-      .quote cite {
-        font-style: normal;
-        text-transform: uppercase;
-        letter-spacing: 0.15em;
-        font-size: 9px;
-        color: var(--muted);
-      }
-      .newsletter {
-        background: #f0e2d9;
-        padding: 58px 20px;
-        text-align: center;
-      }
-      .newsletter h2 {
-        font: 500 34px var(--serif);
-        margin: 0 0 10px;
-      }
-      .newsletter p {
-        font-size: 12px;
-        color: #716b65;
-      }
-      .signup {
-        display: flex;
-        max-width: 390px;
-        margin: 22px auto 0;
-        border-bottom: 1px solid #887f75;
-      }
-      .signup input {
-        flex: 1;
-        background: transparent;
-        border: 0;
-        padding: 13px 4px;
-        outline: none;
-        font: 12px var(--sans);
-      }
-      .signup button {
-        background: none;
-        border: 0;
-        cursor: pointer;
-        font-size: 11px;
-      }
-      .footer {
-        padding: 32px 6.2%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 20px;
-        color: var(--muted);
-        font-size: 10px;
-      }
-      .footer .brand {
-        color: var(--ink);
-        font-size: 21px;
-      }
-      .footer-links {
-        display: flex;
-        gap: 20px;
-      }
-      .toast {
-        position: fixed;
-        bottom: 22px;
-        left: 50%;
-        transform: translate(-50%, 20px);
-        background: var(--ink);
-        color: white;
-        padding: 13px 20px;
-        border-radius: 50px;
-        font-size: 12px;
-        opacity: 0;
-        pointer-events: none;
-        transition: 0.25s;
-        z-index: 9;
-      }
-      .toast.show {
-        opacity: 1;
-        transform: translate(-50%, 0);
-      }
-      @media (max-width: 850px) {
-        .hero {
-          gap: 3%;
-          padding-top: 48px;
-          min-height: 500px;
-        }
-        .hero-art {
-          min-height: 340px;
-        }
-        .grid {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 17px;
-        }
-        .story-inner {
-          gap: 7%;
-        }
-        .header {
-          padding: 0 4%;
-        }
-        .section {
-          padding-left: 5%;
-          padding-right: 5%;
-        }
-      }
-      @media (max-width: 600px) {
-        .announcement {
-          font-size: 9px;
-        }
-        .header {
-          height: 66px;
-        }
-        .nav {
-          gap: 14px;
-        }
-        .nav a:not(:first-child) {
-          display: none;
-        }
-        .brand {
-          font-size: 22px;
-        }
-        .cart {
-          padding: 9px 12px;
-        }
-        .hero {
-          grid-template-columns: 1fr;
-          padding: 48px 7% 55px;
-          gap: 24px;
-        }
-        .hero h1 {
-          font-size: 55px;
-          letter-spacing: -2px;
-          margin-top: 12px;
-        }
-        .hero-art {
-          min-height: 350px;
-        }
-        .frame {
-          width: 65%;
-          max-width: 280px;
-        }
-        .section {
-          padding: 57px 6% 65px;
-        }
-        .section-head {
-          align-items: start;
-          gap: 10px;
-        }
-        .section h2 {
-          font-size: 36px;
-        }
-        .text-link {
-          font-size: 10px;
-          white-space: nowrap;
-          margin-top: 14px;
-        }
-        .filters {
-          overflow-x: auto;
-          padding-bottom: 5px;
-        }
-        .filter {
-          white-space: nowrap;
-        }
-        .grid {
-          gap: 15px 11px;
-        }
-        .product-image {
-          padding: 8px;
-        }
-        .badge {
-          left: 13px;
-          top: 13px;
-          font-size: 7px;
-        }
-        .product-name {
-          font-size: 15px;
-        }
-        .product-meta {
-          font-size: 9px;
-        }
-        .price {
-          font-size: 11px;
-        }
-        .story {
-          padding: 54px 7%;
-        }
-        .story-inner {
-          grid-template-columns: 1fr;
-          gap: 30px;
-        }
-        .story-art {
-          height: 260px;
-        }
-        .quote {
-          padding: 58px 22px;
-        }
-        .quote blockquote {
-          font-size: 21px;
-        }
-        .newsletter h2 {
-          font-size: 30px;
-        }
-        .footer {
-          padding: 26px 6%;
-          flex-wrap: wrap;
-        }
-        .footer-links {
-          gap: 13px;
-        }
-        .footer > span {
-          width: 100%;
-        }
-      }
-    </style>
+    <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+    <title>LenaCreates.art</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="announcement">
-      A little art goes a long way · Free shipping on orders over $75
+      Lorem ipsum dolor sit amet · Consectetur adipiscing elit
     </div>
     <header class="header">
       <a class="brand" href="#home" aria-label="Lena Creates home"
         >lena<span>.</span>creates</a
       >
       <nav class="nav" aria-label="Main navigation">
-        <a href="#shop">Shop prints</a><a href="#story">My story</a
-        ><a href="#newsletter">Get in touch</a>
+        <a href="#shop">Lorem ipsum</a><a href="#story">Dolor sit amet</a
+        ><a href="#newsletter">Consectetur</a>
       </nav>
       <button class="cart" type="button" aria-label="Shopping bag">
-        Bag (<span id="cart-count">0</span>)
+        Lorem (<span id="cart-count">0</span>)
       </button>
     </header>
 
     <main>
       <section class="hero" id="home">
         <div>
-          <div class="eyebrow">Art made with feeling</div>
-          <h1>Make room for <em>beautiful</em> things.</h1>
+          <div class="eyebrow">Lorem ipsum dolor</div>
+          <h1>Lorem ipsum <em>dolor</em> sit amet.</h1>
           <p class="hero-copy">
-            Colorful, thoughtful art prints for the corners of home that could
-            use a little more you.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
           <a class="primary" href="#shop"
-            >Find your favorite <span aria-hidden="true">↗</span></a
+            >Lorem ipsum <span aria-hidden="true">↗</span></a
           >
           <div class="hero-note">
-            Made with love · Printed with care · Ready for your walls
+            Lorem ipsum · Dolor sit amet · Consectetur adipiscing
           </div>
         </div>
         <div class="hero-art" aria-label="Featured art print, Sunroom">
@@ -690,30 +116,30 @@
                 />
               </svg>
             </div>
-            <div class="frame-caption">Sunroom No. 04</div>
+            <div class="frame-caption">Lorem ipsum No. 04</div>
           </div>
-          <div class="stamp">A SMALL<br />STUDIO WITH<br />A BIG HEART</div>
+          <div class="stamp">LOREM<br />IPSUM DOLOR<br />SIT AMET</div>
         </div>
       </section>
 
       <section class="section" id="shop">
         <div class="section-head">
           <div>
-            <div class="eyebrow">The print shop</div>
-            <h2>Art for your everyday.</h2>
+            <div class="eyebrow">Lorem ipsum dolor</div>
+            <h2>Lorem ipsum dolor sit amet.</h2>
           </div>
-          <a class="text-link" href="#prints">Browse all prints&nbsp; ↗</a>
+          <a class="text-link" href="#prints">Lorem ipsum&nbsp; ↗</a>
         </div>
         <div class="filters" aria-label="Filter prints">
-          <button class="filter active" data-filter="all">All prints</button
-          ><button class="filter" data-filter="botanical">Botanical</button
-          ><button class="filter" data-filter="abstract">Abstract</button
-          ><button class="filter" data-filter="coastal">Coastal</button>
+          <button class="filter active" data-filter="all">Lorem ipsum</button
+          ><button class="filter" data-filter="botanical">Dolor</button
+          ><button class="filter" data-filter="abstract">Consectetur</button
+          ><button class="filter" data-filter="coastal">Adipiscing</button>
         </div>
         <div class="grid" id="prints">
           <article class="product" data-category="botanical">
             <div class="product-image">
-              <span class="badge">Bestseller</span>
+              <span class="badge">Lorem ipsum</span>
               <div class="artwork">
                 <svg viewBox="0 0 400 500" aria-label="Garden Study art print">
                   <rect width="400" height="500" fill="#e8d8ba" />
@@ -755,8 +181,8 @@
             </div>
             <div class="product-info">
               <div>
-                <div class="product-name">Garden Study</div>
-                <div class="product-meta">Botanical · Archival paper</div>
+                <div class="product-name">Lorem ipsum</div>
+                <div class="product-meta">Dolor sit amet · Consectetur</div>
               </div>
               <div class="price">$28</div>
             </div>
@@ -788,15 +214,15 @@
             </div>
             <div class="product-info">
               <div>
-                <div class="product-name">Soft Shapes</div>
-                <div class="product-meta">Abstract · Archival paper</div>
+                <div class="product-name">Dolor sit amet</div>
+                <div class="product-meta">Consectetur · Adipiscing elit</div>
               </div>
               <div class="price">$28</div>
             </div>
           </article>
           <article class="product" data-category="coastal">
             <div class="product-image">
-              <span class="badge">New</span>
+              <span class="badge">Lorem ipsum</span>
               <div class="artwork">
                 <svg
                   viewBox="0 0 400 500"
@@ -824,8 +250,8 @@
             </div>
             <div class="product-info">
               <div>
-                <div class="product-name">Somewhere Blue</div>
-                <div class="product-meta">Coastal · Archival paper</div>
+                <div class="product-name">Consectetur</div>
+                <div class="product-meta">Adipiscing elit · Sed do</div>
               </div>
               <div class="price">$32</div>
             </div>
@@ -870,8 +296,8 @@
             </div>
             <div class="product-info">
               <div>
-                <div class="product-name">Little Wildflower</div>
-                <div class="product-meta">Botanical · Archival paper</div>
+                <div class="product-name">Adipiscing elit</div>
+                <div class="product-meta">Dolor sit amet · Consectetur</div>
               </div>
               <div class="price">$28</div>
             </div>
@@ -922,91 +348,51 @@
             </svg>
           </div>
           <div class="story-copy">
-            <div class="eyebrow">A note from Lena</div>
-            <h2>Made slowly. Meant to be lived with.</h2>
+            <div class="eyebrow">Lorem ipsum dolor</div>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing.</h2>
             <p>
-              Hi, I’m Lena — an artist, color collector, and firm believer that
-              the things we surround ourselves with should make us feel
-              something. Every print begins as an original piece in my little
-              home studio.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+              posuere erat a ante venenatis dapibus posuere velit aliquet.
+              Curabitur blandit tempus porttitor. Aenean lacinia bibendum nulla
+              sed consectetur.
             </p>
             <a class="text-link" href="#newsletter"
-              >A little more about me&nbsp; ↗</a
+              >Lorem ipsum dolor&nbsp; ↗</a
             >
           </div>
         </div>
       </section>
       <section class="quote">
         <blockquote>
-          “The print arrived today and I love it more than I thought possible.
-          It feels like it was made for this room.”
+          “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          posuere erat a ante venenatis dapibus posuere velit aliquet.”
         </blockquote>
-        <cite>— Rachel, verified customer</cite>
+        <cite>— Lorem ipsum, dolor sit amet</cite>
       </section>
       <section class="newsletter" id="newsletter">
-        <div class="eyebrow">Notes from the studio</div>
-        <h2>A little color in your inbox.</h2>
-        <p>New work, small stories, and 10% off your first order.</p>
+        <div class="eyebrow">Lorem ipsum dolor</div>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <p>Consectetur adipiscing elit, sed do eiusmod tempor.</p>
         <form class="signup" id="signup">
           <input
             type="email"
-            placeholder="Your email address"
-            aria-label="Your email address"
+            placeholder="Lorem ipsum dolor"
+            aria-label="Lorem ipsum dolor"
             required
-          /><button type="submit">Count me in&nbsp; ↗</button>
+          /><button type="submit">Lorem ipsum&nbsp; ↗</button>
         </form>
       </section>
     </main>
     <footer class="footer">
       <a class="brand" href="#home">lena<span>.</span>creates</a>
       <div class="footer-links">
-        <a href="#shop">Shop</a><a href="#story">About</a
-        ><a href="mailto:hello@lenacreates.art">Contact</a
-        ><a href="#newsletter">Instagram ↗</a>
+        <a href="#shop">Lorem</a><a href="#story">Ipsum</a
+        ><a href="mailto:hello@lenacreates.art">Dolor</a
+        ><a href="#newsletter">Sit amet ↗</a>
       </div>
-      <span>© 2025 Lena Creates · Made with care</span>
+      <span>© 2025 Lorem ipsum · Dolor sit amet</span>
     </footer>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script>
-      const filters = document.querySelectorAll(".filter");
-      filters.forEach((button) =>
-        button.addEventListener("click", () => {
-          filters.forEach((item) => item.classList.remove("active"));
-          button.classList.add("active");
-          document.querySelectorAll(".product").forEach((product) => {
-            product.classList.toggle(
-              "hidden",
-              button.dataset.filter !== "all" &&
-                product.dataset.category !== button.dataset.filter
-            );
-          });
-        })
-      );
-      let count = 0;
-      const toast = document.getElementById("toast");
-      document.querySelector(".cart").addEventListener("click", () => {
-        toast.textContent = count
-          ? `${count} ${count === 1 ? "print" : "prints"} in your bag`
-          : "Your bag is waiting for a little art.";
-        toast.classList.add("show");
-        setTimeout(() => toast.classList.remove("show"), 2400);
-      });
-      document.querySelectorAll(".product").forEach((product) =>
-        product.addEventListener("click", () => {
-          count++;
-          document.getElementById("cart-count").textContent = count;
-          toast.textContent = `${product.querySelector(".product-name").textContent} added to your bag`;
-          toast.classList.add("show");
-          setTimeout(() => toast.classList.remove("show"), 2400);
-        })
-      );
-      document.getElementById("signup").addEventListener("submit", (event) => {
-        event.preventDefault();
-        toast.textContent = "Thanks for joining — see you in your inbox!";
-        toast.classList.add("show");
-        event.target.reset();
-        setTimeout(() => toast.classList.remove("show"), 3000);
-      });
-    </script>
+    <script src="script.js" defer></script>
   </body>
 </html>
