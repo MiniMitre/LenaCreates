@@ -277,7 +277,21 @@
         box-shadow: 0 5px 14px #201d191c;
         transition: transform 0.4s;
       }
+      .product-checkout {
+        display: block;
+      }
+      .product-artwork {
+        display: block;
+        width: 100%;
+        aspect-ratio: 4/5;
+        object-fit: cover;
+        box-shadow: 0 5px 14px #201d191c;
+        transition: transform 0.4s;
+      }
       .product:hover .product-image .artwork {
+        transform: scale(1.025);
+      }
+      .product:hover .product-artwork {
         transform: scale(1.025);
       }
       .product-image .artwork svg {
@@ -311,7 +325,8 @@
       }
       .price {
         font-size: 12px;
-        white-space: nowrap;
+        white-space: normal;
+        text-align: right;
         margin-top: 3px;
       }
       .story {
