@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8f6f1" />
+    <title>Purchase Prints | LenaCreates.art</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a class="brand" href="../index.html" aria-label="Lena Creates home"
+        >lena<span>.</span>creates</a
+      >
+      <div class="header-right">
+        <nav class="nav" aria-label="Main navigation">
+          <a href="../about/index.html">About</a>
+          <a href="../portfolio/index.html">Portfolio</a>
+          <a href="index.html" aria-current="page">Purchase Prints</a>
+          <a href="../contact/index.html">Contact</a>
+        </nav>
+        <button
+          class="cart"
+          type="button"
+          aria-label="Shopping bag"
+          id="cart-btn"
+        >
+          Bag (<span id="cart-count">0</span>)
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" id="shop">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Shop</div>
+            <h1>Purchase prints</h1>
+          </div>
+        </div>
+        <div class="grid shop-grid" id="prints">
+          <article class="product" data-category="botanical">
+            <a
+              class="product-image product-checkout"
+              href="https://buy.stripe.com/test_6oU00j4N8eKI1RAbEec3m00"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Purchase Centrepiece"
+            >
+              <img
+                class="product-artwork"
+                src="../images/image.jpg"
+                alt="Floral paper collage artwork"
+              />
+            </a>
+            <div class="product-info">
+              <div>
+                <div class="product-name">Centrepiece</div>
+                <div class="product-meta">Centrepiece artwork</div>
+              </div>
+              <div class="price">£5</div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="brand" href="../index.html" aria-label="Lena Creates home"
+        >lena<span>.</span>creates</a
+      >
+      <div class="footer-links">
+        <a href="../about/index.html">About</a>
+        <a href="../portfolio/index.html">Portfolio</a>
+        <a href="index.html">Purchase Prints</a>
+        <a href="../contact/index.html">Contact</a>
+      </div>
+      <span>Copyright notice goes here</span>
+    </footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="../script.js" defer></script>
+  </body>
+</html>

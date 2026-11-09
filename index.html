@@ -6,365 +6,72 @@
     <meta name="theme-color" content="#f8f6f1" />
     <meta
       name="description"
-      content="Short description of the art business for search results."
+      content="Explore original artwork and prints by Lena Creates."
     />
     <title>LenaCreates.art</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="announcement">Announcement or promotion text goes here</div>
     <header class="header">
-      <a class="brand" href="#home" aria-label="Lena Creates home"
+      <a class="brand" href="index.html" aria-label="Lena Creates home"
         >lena<span>.</span>creates</a
       >
-      <nav class="nav" aria-label="Main navigation">
-        <a href="#shop">Shop</a><a href="#story">About</a
-        ><a href="#newsletter">Contact</a>
-      </nav>
-      <button class="cart" type="button" aria-label="Shopping bag">
-        Bag (<span id="cart-count">0</span>)
-      </button>
+      <div class="header-right">
+        <nav class="nav" aria-label="Main navigation">
+          <a href="about/index.html">About</a>
+          <a href="portfolio/index.html">Portfolio</a>
+          <a href="shop/index.html">Purchase Prints</a>
+          <a href="contact/index.html">Contact</a>
+        </nav>
+      </div>
     </header>
 
     <main>
+      <section class="hero gallery" id="gallery">
+        <img
+          class="gallery-image"
+          src="images/image.jpg"
+          alt="Floral paper collage artwork"
+        />
+      </section>
       <section class="hero" id="home">
         <div>
-          <div class="eyebrow">Short intro or brand tagline</div>
-          <h1>Main title goes <em>here</em></h1>
+          <div class="eyebrow">Lena Creates</div>
+          <h1>Art made with <em>heart</em></h1>
           <p class="hero-copy">
-            Subtitle or short introduction goes here. Describe the artwork, your
-            studio, or what makes your work special.
+            Explore original artwork, learn more about the artist, or find a
+            print to take home.
           </p>
-          <a class="primary" href="#shop"
-            >Shop button text <span aria-hidden="true">↗</span></a
+          <a class="primary" href="portfolio/index.html"
+            >Explore the portfolio <span aria-hidden="true">↗</span></a
           >
-          <div class="hero-note">
-            Short reassurance, shipping detail, or supporting note
-          </div>
         </div>
-        <div class="hero-art" aria-label="Featured art print, Sunroom">
-          <span class="spark" aria-hidden="true">✳</span>
+        <div class="hero-art">
           <div class="frame">
             <div class="artwork">
-              <svg
-                viewBox="0 0 400 500"
-                role="img"
-                aria-label="Abstract sunlit still life with flowers"
-              >
-                <rect width="400" height="500" fill="#edb99b" />
-                <path d="M0 0h400v176H0z" fill="#f2d8af" />
-                <circle cx="300" cy="112" r="58" fill="#e98365" />
-                <path d="M0 352q95-44 198 0t202 2v146H0z" fill="#738369" />
-                <path d="M38 500V245h78v255z" fill="#d78968" />
-                <path d="M116 500V274h82v226z" fill="#f5d9b2" />
-                <path d="M198 500V234h99v266z" fill="#bd705b" />
-                <path d="M297 500V298h103v202z" fill="#f2d8af" />
-                <path
-                  d="M246 330q-5-111 20-180m-19 107q-56-38-68-79m67 46q43-53 75-58"
-                  fill="none"
-                  stroke="#536b4d"
-                  stroke-width="8"
-                  stroke-linecap="round"
-                />
-                <g fill="#f3d9a8">
-                  <ellipse
-                    cx="196"
-                    cy="174"
-                    rx="17"
-                    ry="34"
-                    transform="rotate(-35 196 174)"
-                  />
-                  <ellipse
-                    cx="218"
-                    cy="150"
-                    rx="17"
-                    ry="34"
-                    transform="rotate(12 218 150)"
-                  />
-                  <ellipse
-                    cx="251"
-                    cy="151"
-                    rx="17"
-                    ry="34"
-                    transform="rotate(48 251 151)"
-                  />
-                  <ellipse
-                    cx="267"
-                    cy="183"
-                    rx="17"
-                    ry="34"
-                    transform="rotate(85 267 183)"
-                  />
-                  <ellipse
-                    cx="243"
-                    cy="207"
-                    rx="17"
-                    ry="34"
-                    transform="rotate(140 243 207)"
-                  />
-                  <ellipse
-                    cx="211"
-                    cy="202"
-                    rx="17"
-                    ry="34"
-                    transform="rotate(190 211 202)"
-                  />
-                </g>
-                <circle cx="234" cy="179" r="17" fill="#d98952" />
-                <path
-                  d="M79 318q-30-55 0-84 30 29 0 84m6 15q18-53 57-42-9 44-57 42"
-                  fill="#536b4d"
-                />
-              </svg>
-            </div>
-            <div class="frame-caption">Featured artwork title</div>
-          </div>
-          <div class="stamp">STUDIO<br />BADGE OR<br />SHORT NOTE</div>
-        </div>
-      </section>
-
-      <section class="section" id="shop">
-        <div class="section-head">
-          <div>
-            <div class="eyebrow">Shop section label</div>
-            <h2>Shop section heading</h2>
-          </div>
-          <a class="text-link" href="#prints">View all products&nbsp; ↗</a>
-        </div>
-        <div class="filters" aria-label="Filter prints">
-          <button class="filter active" data-filter="all">All products</button
-          ><button class="filter" data-filter="botanical">Botanical</button
-          ><button class="filter" data-filter="abstract">Abstract</button
-          ><button class="filter" data-filter="coastal">Coastal</button>
-        </div>
-        <div class="grid" id="prints">
-          <article class="product" data-category="botanical">
-            <a
-              class="product-image product-checkout"
-              href="https://buy.stripe.com/test_6oU00j4N8eKI1RAbEec3m00"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Purchase this artwork"
-            >
-              <span class="badge">Centrepiece</span>
               <img
                 class="product-artwork"
                 src="images/image.jpg"
                 alt="Floral paper collage artwork"
               />
-            </a>
-            <div class="product-info">
-              <div>
-                <div class="product-name">Centrepiece</div>
-                <div class="product-meta">Centrepiece artwork</div>
-              </div>
-              <div class="price">£5</div>
             </div>
-          </article>
-          <article class="product" data-category="abstract">
-            <div class="product-image">
-              <div class="artwork">
-                <svg viewBox="0 0 400 500" aria-label="Soft Shapes art print">
-                  <rect width="400" height="500" fill="#dce0d0" />
-                  <circle cx="190" cy="168" r="106" fill="#e68b6b" />
-                  <path
-                    d="M0 346q65-87 153-26t111 10q55-90 136-26v196H0z"
-                    fill="#e8c996"
-                  />
-                  <path
-                    d="M70 405q29-138 108-113 70 21 5 208H30z"
-                    fill="#738169"
-                  />
-                  <circle cx="275" cy="320" r="61" fill="#c8775f" />
-                  <path d="M0 449q108-68 218-10t182-8v69H0z" fill="#d0a179" />
-                  <path
-                    d="M278 105v78m-39-39h78"
-                    stroke="#f6e8cd"
-                    stroke-width="7"
-                    stroke-linecap="round"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div class="product-info">
-              <div>
-                <div class="product-name">Product 2 name</div>
-                <div class="product-meta">Product 2 description</div>
-              </div>
-              <div class="price">Product 2 price</div>
-            </div>
-          </article>
-          <article class="product" data-category="coastal">
-            <div class="product-image">
-              <span class="badge">Product badge or label</span>
-              <div class="artwork">
-                <svg
-                  viewBox="0 0 400 500"
-                  aria-label="Somewhere Blue art print"
-                >
-                  <rect width="400" height="500" fill="#f0dfc2" />
-                  <circle cx="111" cy="123" r="49" fill="#d77b61" />
-                  <path d="M0 210q95-35 200 0t200 0v102H0z" fill="#74949a" />
-                  <path d="M0 272q104-37 207 0t193 0v119H0z" fill="#507880" />
-                  <path d="M0 352q94-48 205 0t195 0v148H0z" fill="#d89a72" />
-                  <path
-                    d="M0 389q122-34 239 4t161-7"
-                    fill="none"
-                    stroke="#f1d8ae"
-                    stroke-width="8"
-                  />
-                  <path
-                    d="M55 252q93-28 168 1m-122 71q92-31 209 1"
-                    fill="none"
-                    stroke="#c6d3c4"
-                    stroke-width="5"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div class="product-info">
-              <div>
-                <div class="product-name">Product 3 name</div>
-                <div class="product-meta">Product 3 description</div>
-              </div>
-              <div class="price">Product 3 price</div>
-            </div>
-          </article>
-          <article class="product" data-category="botanical">
-            <div class="product-image">
-              <div class="artwork">
-                <svg
-                  viewBox="0 0 400 500"
-                  aria-label="Little Wildflower art print"
-                >
-                  <rect width="400" height="500" fill="#ead5b6" />
-                  <path d="M0 361q100-70 201-5t199-6v150H0z" fill="#9a9c7d" />
-                  <path
-                    d="M200 500V205m-2 172q-69-81-111-44m112-22q65-91 113-64m-112-64q-36-80-78-83"
-                    fill="none"
-                    stroke="#536b4d"
-                    stroke-width="9"
-                    stroke-linecap="round"
-                  />
-                  <g fill="#d98169">
-                    <circle cx="200" cy="196" r="22" />
-                    <circle cx="178" cy="196" r="18" />
-                    <circle cx="222" cy="196" r="18" />
-                    <circle cx="200" cy="174" r="18" />
-                    <circle cx="200" cy="218" r="18" />
-                  </g>
-                  <circle cx="200" cy="196" r="10" fill="#e9c78e" />
-                  <g fill="#f1e4c9">
-                    <circle cx="89" cy="328" r="14" />
-                    <circle cx="310" cy="288" r="14" />
-                    <circle cx="122" cy="263" r="11" />
-                  </g>
-                  <path
-                    d="M40 435q92-43 169 4t152-5"
-                    fill="none"
-                    stroke="#e8c99e"
-                    stroke-width="8"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div class="product-info">
-              <div>
-                <div class="product-name">Product 4 name</div>
-                <div class="product-meta">Product 4 description</div>
-              </div>
-              <div class="price">Product 4 price</div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="story" id="story">
-        <div class="story-inner">
-          <div
-            class="story-art"
-            aria-label="An artist's colorful studio illustration"
-          >
-            <svg
-              viewBox="0 0 600 400"
-              role="img"
-              aria-label="Sunlit studio with a framed flower painting"
-            >
-              <rect width="600" height="400" fill="#dedfcf" />
-              <rect x="0" y="265" width="600" height="135" fill="#bd9777" />
-              <rect x="43" y="45" width="203" height="198" fill="#f7edda" />
-              <rect x="58" y="60" width="173" height="168" fill="#d4ddd0" />
-              <circle cx="184" cy="105" r="34" fill="#e7a26f" />
-              <path d="M58 187q70-82 173 4v37H58z" fill="#71826c" />
-              <rect x="328" y="62" width="168" height="210" fill="#fffdf5" />
-              <rect x="340" y="75" width="144" height="168" fill="#e9bd9b" />
-              <circle cx="414" cy="141" r="33" fill="#e88367" />
-              <path
-                d="M400 239V168m0 43q-28-39-44-25m45-27q23-34 48-18"
-                fill="none"
-                stroke="#50664b"
-                stroke-width="7"
-              />
-              <path d="M0 326h600" stroke="#8a6e57" stroke-width="8" />
-              <path d="M275 400l17-134h96l23 134" fill="#a96e50" />
-              <path
-                d="M289 267q45 28 93 0"
-                fill="none"
-                stroke="#f0d7b6"
-                stroke-width="8"
-              />
-              <circle cx="105" cy="310" r="33" fill="#e4a77c" />
-              <path
-                d="M105 277v66m-33-33h66"
-                stroke="#78906d"
-                stroke-width="5"
-              />
-            </svg>
-          </div>
-          <div class="story-copy">
-            <div class="eyebrow">About section label</div>
-            <h2>About section headline goes here</h2>
-            <p>
-              Artist bio or brand story goes here. Share who you are, how you
-              make your work, and what inspires the pieces in your collection.
-            </p>
-            <a class="text-link" href="#newsletter"
-              >About page link text&nbsp; ↗</a
-            >
+            <div class="frame-caption">Floral paper collage</div>
           </div>
         </div>
-      </section>
-      <section class="quote">
-        <blockquote>
-          “Customer review goes here. Add a short quote about a customer's
-          experience with your artwork or shop.”
-        </blockquote>
-        <cite>— Customer name · Location</cite>
-      </section>
-      <section class="newsletter" id="newsletter">
-        <div class="eyebrow">Newsletter section label</div>
-        <h2>Newsletter signup heading</h2>
-        <p>Short note about what subscribers can expect to receive.</p>
-        <form class="signup" id="signup">
-          <input
-            type="email"
-            placeholder="Email address"
-            aria-label="Email address"
-            required
-          /><button type="submit">Newsletter signup button&nbsp; ↗</button>
-        </form>
       </section>
     </main>
+
     <footer class="footer">
-      <a class="brand" href="#home">lena<span>.</span>creates</a>
+      <a class="brand" href="index.html" aria-label="Lena Creates home"
+        >lena<span>.</span>creates</a
+      >
       <div class="footer-links">
-        <a href="#shop">Shop</a><a href="#story">About</a
-        ><a href="mailto:info@lenacreates.art">Contact</a
-        ><a href="#newsletter">Social media ↗</a>
+        <a href="about/index.html">About</a>
+        <a href="portfolio/index.html">Portfolio</a>
+        <a href="shop/index.html">Purchase Prints</a>
+        <a href="contact/index.html">Contact</a>
       </div>
       <span>Copyright notice goes here</span>
     </footer>
-    <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script src="script.js" defer></script>
   </body>
 </html>
