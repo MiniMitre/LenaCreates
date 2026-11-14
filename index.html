@@ -14,63 +14,45 @@
   <body>
     <header class="header">
       <a class="brand" href="index.html" aria-label="Lena Creates home"
-        >lena<span>.</span>creates</a
+        >LenaCreates<span class="brand-dot">.</span>art</a
       >
-      <div class="header-right">
-        <nav class="nav" aria-label="Main navigation">
-          <a href="about/index.html">About</a>
-          <a href="portfolio/index.html">Portfolio</a>
-          <a href="shop/index.html">Purchase Prints</a>
-          <a href="contact/index.html">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <section class="hero gallery" id="gallery">
-        <img
-          class="gallery-image"
-          src="images/image.jpg"
-          alt="Floral paper collage artwork"
-        />
-      </section>
-      <section class="hero" id="home">
-        <div>
-          <div class="eyebrow">Lena Creates</div>
-          <h1>Art made with <em>heart</em></h1>
-          <p class="hero-copy">
-            Explore original artwork, learn more about the artist, or find a
-            print to take home.
-          </p>
-          <a class="primary" href="portfolio/index.html"
-            >Explore the portfolio <span aria-hidden="true">↗</span></a
-          >
-        </div>
-        <div class="hero-art">
-          <div class="frame">
-            <div class="artwork">
-              <img
-                class="product-artwork"
-                src="images/image.jpg"
-                alt="Floral paper collage artwork"
-              />
-            </div>
-            <div class="frame-caption">Floral paper collage</div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <a class="brand" href="index.html" aria-label="Lena Creates home"
-        >lena<span>.</span>creates</a
-      >
-      <div class="footer-links">
+      <nav class="nav" aria-label="Main navigation">
         <a href="about/index.html">About</a>
         <a href="portfolio/index.html">Portfolio</a>
         <a href="shop/index.html">Purchase Prints</a>
         <a href="contact/index.html">Contact</a>
-      </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="home-gallery" aria-label="Image gallery">
+        <img src="images/image.jpg" alt="Floral paper collage artwork" />
+        <img src="images/IMG_9301.JPG" alt="Jellyfish paper collage artwork" />
+        <img src="images/image.jpg" alt="Floral paper collage artwork" />
+        <span class="gallery-label">Image Gallery (top third)</span>
+      </section>
+      <section class="home-links" aria-label="Explore the site">
+        <a class="home-card" href="about/index.html">
+          <img src="images/image.jpg" alt="" />
+          <span>ABOUT</span>
+        </a>
+        <a class="home-card" href="portfolio/index.html">
+          <img src="images/IMG_9301.JPG" alt="" />
+          <span>PORTFOLIO</span>
+        </a>
+        <a class="home-card" href="shop/index.html">
+          <img src="images/image.jpg" alt="" />
+          <span>PURCHASE PRINTS</span>
+        </a>
+        <a class="home-card" href="contact/index.html">
+          <img src="images/IMG_9301.JPG" alt="" />
+          <span>CONTACT</span>
+        </a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="footer-social">Links to social</span>
       <span>Copyright notice goes here</span>
     </footer>
   </body>

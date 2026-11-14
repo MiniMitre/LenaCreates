@@ -10,7 +10,7 @@
   <body>
     <header class="header">
       <a class="brand" href="../index.html" aria-label="Lena Creates home"
-        >lena<span>.</span>creates</a
+        >LenaCreates<span class="brand-dot">.</span>art</a
       >
       <div class="header-right">
         <nav class="nav" aria-label="Main navigation">
@@ -31,50 +31,149 @@
     </header>
 
     <main>
-      <section class="section" id="shop">
-        <div class="section-head">
-          <div>
-            <div class="eyebrow">Shop</div>
-            <h1>Purchase prints</h1>
-          </div>
+      <section class="page-main shop-main" id="shop">
+        <div class="page-heading shop-heading">
+          <h1 class="page-title">PURCHASE PRINTS</h1>
         </div>
-        <div class="grid shop-grid" id="prints">
-          <article class="product" data-category="botanical">
-            <a
-              class="product-image product-checkout"
-              href="https://buy.stripe.com/test_6oU00j4N8eKI1RAbEec3m00"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Purchase Centrepiece"
-            >
-              <img
-                class="product-artwork"
-                src="../images/image.jpg"
-                alt="Floral paper collage artwork"
-              />
-            </a>
-            <div class="product-info">
-              <div>
-                <div class="product-name">Centrepiece</div>
-                <div class="product-meta">Centrepiece artwork</div>
-              </div>
-              <div class="price">£5</div>
+        <div class="shop-layout">
+          <aside class="filter-sidebar" aria-label="Filter prints">
+            <h2>Filter</h2>
+            <div class="filters">
+              <button class="filter active" type="button" data-filter="all">
+                All Prints
+              </button>
+              <button class="filter" type="button" data-filter="small">
+                A5 &amp; A6 prints
+              </button>
+              <button class="filter" type="button" data-filter="a4">
+                A4 prints
+              </button>
+              <button class="filter" type="button" data-filter="cards">
+                Greetings Cards
+              </button>
             </div>
-          </article>
+          </aside>
+          <div class="shop-grid" id="prints">
+            <article class="product" data-category="small">
+              <a
+                class="product-image product-checkout"
+                href="https://buy.stripe.com/test_6oU00j4N8eKI1RAbEec3m00"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Purchase Centrepiece"
+              >
+                <img
+                  class="product-artwork"
+                  src="../images/image.jpg"
+                  alt="Floral paper collage artwork"
+                />
+              </a>
+              <div class="product-info">
+                <div>
+                  <div class="product-name">Centrepiece</div>
+                  <div class="product-meta">Centrepiece artwork</div>
+                </div>
+                <div class="price">£5</div>
+              </div>
+            </article>
+            <article class="product" data-category="small">
+              <div class="product-image">
+                <img
+                  class="product-artwork"
+                  src="../images/IMG_9301.JPG"
+                  alt="Jellyfish paper collage artwork"
+                />
+              </div>
+              <div class="product-info">
+                <div class="product-name">Title</div>
+                <div class="price">£-</div>
+              </div>
+            </article>
+            <article class="product" data-category="a4">
+              <div class="product-image">
+                <img
+                  class="product-artwork"
+                  src="../images/image.jpg"
+                  alt="Floral paper collage artwork"
+                />
+              </div>
+              <div class="product-info">
+                <div class="product-name">Title</div>
+                <div class="price">£-</div>
+              </div>
+            </article>
+            <article class="product" data-category="a4">
+              <div class="product-image">
+                <img
+                  class="product-artwork"
+                  src="../images/IMG_9301.JPG"
+                  alt="Jellyfish paper collage artwork"
+                />
+              </div>
+              <div class="product-info">
+                <div class="product-name">Title</div>
+                <div class="price">£-</div>
+              </div>
+            </article>
+            <article class="product" data-category="cards">
+              <div class="product-image">
+                <img
+                  class="product-artwork"
+                  src="../images/image.jpg"
+                  alt="Floral paper collage artwork"
+                />
+              </div>
+              <div class="product-info">
+                <div class="product-name">Title</div>
+                <div class="price">£-</div>
+              </div>
+            </article>
+            <article class="product" data-category="cards">
+              <div class="product-image">
+                <img
+                  class="product-artwork"
+                  src="../images/IMG_9301.JPG"
+                  alt="Jellyfish paper collage artwork"
+                />
+              </div>
+              <div class="product-info">
+                <div class="product-name">Title</div>
+                <div class="price">£-</div>
+              </div>
+            </article>
+            <article class="product" data-category="small">
+              <div class="product-image">
+                <img
+                  class="product-artwork"
+                  src="../images/image.jpg"
+                  alt="Floral paper collage artwork"
+                />
+              </div>
+              <div class="product-info">
+                <div class="product-name">Title</div>
+                <div class="price">£-</div>
+              </div>
+            </article>
+            <article class="product" data-category="a4">
+              <div class="product-image">
+                <img
+                  class="product-artwork"
+                  src="../images/IMG_9301.JPG"
+                  alt="Jellyfish paper collage artwork"
+                />
+              </div>
+              <div class="product-info">
+                <div class="product-name">Title</div>
+                <div class="price">£-</div>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <a class="brand" href="../index.html" aria-label="Lena Creates home"
-        >lena<span>.</span>creates</a
-      >
-      <div class="footer-links">
-        <a href="../about/index.html">About</a>
-        <a href="../portfolio/index.html">Portfolio</a>
-        <a href="index.html">Purchase Prints</a>
-        <a href="../contact/index.html">Contact</a>
-      </div>
+      <span class="footer-social">Links to social</span>
       <span>Copyright notice goes here</span>
     </footer>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
