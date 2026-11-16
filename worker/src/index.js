@@ -167,13 +167,24 @@ export default {
       );
       const session = await stripeResponse.json();
       if (!stripeResponse.ok) {
+        const stripeError = session.error;
+        const errorDetails = {
+          type: stripeError?.type,
+          code: stripeError?.code,
+          param: stripeError?.param,
+          message: stripeError?.message,
+        };
         console.error(
           "Stripe Checkout Session creation failed.",
           stripeResponse.status,
-          session.error?.message,
+          errorDetails,
         );
+        const errorMessage =
+          secretMode === "test" && typeof stripeError?.message === "string"
+            ? `Stripe test error (${stripeError.code || stripeError.type || stripeResponse.status}): ${stripeError.message}`
+            : "Stripe could not create a checkout session. Please try again.";
         return jsonResponse(
-          { error: "Stripe could not create a checkout session. Please try again." },
+          { error: errorMessage },
           502,
           corsHeaders,
         );
