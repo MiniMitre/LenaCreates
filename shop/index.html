@@ -19,14 +19,9 @@
           <a href="index.html" aria-current="page">Purchase Prints</a>
           <a href="../contact/index.html">Contact</a>
         </nav>
-        <button
-          class="cart"
-          type="button"
-          aria-label="Shopping bag"
-          id="cart-btn"
-        >
+        <a class="cart" id="cart-btn" href="../checkout/index.html">
           Bag (<span id="cart-count">0</span>)
-        </button>
+        </a>
       </div>
     </header>
 
@@ -53,121 +48,7 @@
               </button>
             </div>
           </aside>
-          <div class="shop-grid" id="prints">
-            <article class="product" data-category="small">
-              <a
-                class="product-image product-checkout"
-                href="https://buy.stripe.com/test_6oU00j4N8eKI1RAbEec3m00"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Purchase Centrepiece"
-              >
-                <img
-                  class="product-artwork"
-                  src="../images/image.jpg"
-                  alt="Floral paper collage artwork"
-                />
-              </a>
-              <div class="product-info">
-                <div>
-                  <div class="product-name">Centrepiece</div>
-                  <div class="product-meta">Centrepiece artwork</div>
-                </div>
-                <div class="price">£5</div>
-              </div>
-            </article>
-            <article class="product" data-category="small">
-              <div class="product-image">
-                <img
-                  class="product-artwork"
-                  src="../images/IMG_9301.JPG"
-                  alt="Jellyfish paper collage artwork"
-                />
-              </div>
-              <div class="product-info">
-                <div class="product-name">Title</div>
-                <div class="price">£-</div>
-              </div>
-            </article>
-            <article class="product" data-category="a4">
-              <div class="product-image">
-                <img
-                  class="product-artwork"
-                  src="../images/image.jpg"
-                  alt="Floral paper collage artwork"
-                />
-              </div>
-              <div class="product-info">
-                <div class="product-name">Title</div>
-                <div class="price">£-</div>
-              </div>
-            </article>
-            <article class="product" data-category="a4">
-              <div class="product-image">
-                <img
-                  class="product-artwork"
-                  src="../images/IMG_9301.JPG"
-                  alt="Jellyfish paper collage artwork"
-                />
-              </div>
-              <div class="product-info">
-                <div class="product-name">Title</div>
-                <div class="price">£-</div>
-              </div>
-            </article>
-            <article class="product" data-category="cards">
-              <div class="product-image">
-                <img
-                  class="product-artwork"
-                  src="../images/image.jpg"
-                  alt="Floral paper collage artwork"
-                />
-              </div>
-              <div class="product-info">
-                <div class="product-name">Title</div>
-                <div class="price">£-</div>
-              </div>
-            </article>
-            <article class="product" data-category="cards">
-              <div class="product-image">
-                <img
-                  class="product-artwork"
-                  src="../images/IMG_9301.JPG"
-                  alt="Jellyfish paper collage artwork"
-                />
-              </div>
-              <div class="product-info">
-                <div class="product-name">Title</div>
-                <div class="price">£-</div>
-              </div>
-            </article>
-            <article class="product" data-category="small">
-              <div class="product-image">
-                <img
-                  class="product-artwork"
-                  src="../images/image.jpg"
-                  alt="Floral paper collage artwork"
-                />
-              </div>
-              <div class="product-info">
-                <div class="product-name">Title</div>
-                <div class="price">£-</div>
-              </div>
-            </article>
-            <article class="product" data-category="a4">
-              <div class="product-image">
-                <img
-                  class="product-artwork"
-                  src="../images/IMG_9301.JPG"
-                  alt="Jellyfish paper collage artwork"
-                />
-              </div>
-              <div class="product-info">
-                <div class="product-name">Title</div>
-                <div class="price">£-</div>
-              </div>
-            </article>
-          </div>
+          <div class="shop-grid" id="prints"></div>
         </div>
       </section>
     </main>
@@ -177,6 +58,8 @@
       <span>Copyright notice goes here</span>
     </footer>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="../store.js" defer></script>
+    <script src="shop.js" defer></script>
     <script src="../script.js" defer></script>
   </body>
 </html>

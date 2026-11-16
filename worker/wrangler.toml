@@ -1,0 +1,9 @@
+name = "lenacreates-checkout"
+main = "src/index.js"
+compatibility_date = "2026-11-16"
+workers_dev = true
+
+[vars]
+SITE_ORIGIN = "https://lenacreates.art"
+STRIPE_PUBLISHABLE_KEY = "pk_test_51UVts8FMJWDNA1j7u0zV1lKUNLfd2uyuSOlzO8hzoBomljdtiBGcBZfiJUny2ys7hD625NYRLzHjhkSsExSM6nmN00wVg9TTTk"
+PRICE_CENTREPIECE = "price_1UVvB7FMJWDNA1j7k05WhS58"

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8f6f1" />
+    <title>Checkout | LenaCreates.art</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a class="brand" href="../index.html" aria-label="Lena Creates home"
+        >LenaCreates<span class="brand-dot">.</span>art</a
+      >
+      <a class="cart" id="cart-btn" href="index.html">
+        Bag (<span id="cart-count">0</span>)
+      </a>
+    </header>
+    <main class="page-main">
+      <div class="page-heading">
+        <h1 class="page-title">YOUR BAG</h1>
+      </div>
+      <p id="checkout-status" role="status" aria-live="polite"></p>
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-summary">
+        <p>Subtotal <strong id="cart-subtotal">£0.00</strong></p>
+        <p id="shipping-note">Shipping and final total are confirmed at checkout.</p>
+        <button id="checkout-button" class="primary" type="button" disabled>
+          Continue to Stripe Checkout
+        </button>
+      </div>
+      <p><a href="../shop/index.html">Return to shop</a></p>
+    </main>
+    <script src="../store.js" defer></script>
+    <script src="checkout.js" defer></script>
+    <script src="../script.js" defer></script>
+  </body>
+</html>
