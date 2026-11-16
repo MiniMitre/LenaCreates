@@ -42,6 +42,9 @@
 - The Worker collects a billing address and a GB shipping address. Shipping
   charges are not configured yet, so set up Stripe shipping rates before
   relying on the checkout total for postage.
+- Saving a payment method is not enabled. Stripe requires an existing Customer
+  for that option, and this one-time checkout has no customer account or
+  persistence flow. Add customer creation/reuse before enabling saved methods.
 
 ## Flow
 

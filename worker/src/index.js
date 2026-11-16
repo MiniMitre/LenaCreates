@@ -138,7 +138,6 @@ export default {
       "automatic_tax[enabled]": "false",
       submit_type: "auto",
       "shipping_address_collection[allowed_countries][0]": "GB",
-      "saved_payment_method_options[payment_method_save]": "enabled",
       integration_identifier: "custom_embedded_web_0001",
     });
 
