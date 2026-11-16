@@ -91,7 +91,7 @@ button {
 .nav a:hover,
 .nav a[aria-current="page"],
 .footer a:hover {
-  color: var(--accent);
+  color: var(--green);
 }
 
 .header-right {
