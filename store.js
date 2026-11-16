@@ -16,7 +16,7 @@
       name: "Jellyfish",
       description: "A4 Jellyfish artwork",
       category: "A4",
-      image: "../images/jellyfish.png",
+      image: "../images/Jellyfish.png",
       imageAlt: "Jellyfish paper collage artwork",
       priceMinor: 1000,
       priceLabel: "£10",

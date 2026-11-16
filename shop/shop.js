@@ -1,7 +1,6 @@
 const shopGrid = document.getElementById("prints");
 
 window.Store.products.forEach((product) => {
-  console.log(product);
   const card = document.createElement("article");
   card.className = "product";
   card.dataset.category = product.category;
