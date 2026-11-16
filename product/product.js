@@ -26,10 +26,12 @@ if (!product) {
     addButton.addEventListener("click", () => {
       try {
         window.Store.addToCart(product.id);
-        productStatus.textContent = `${product.name} added to your bag.`;
+        productStatus.textContent = `${product.name} added to your basket.`;
       } catch (error) {
         productStatus.textContent =
-          error instanceof Error ? error.message : "Could not update your bag.";
+          error instanceof Error
+            ? error.message
+            : "Could not update your basket.";
       }
     });
   }

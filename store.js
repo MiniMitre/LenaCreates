@@ -98,7 +98,9 @@
 
     const parsed = JSON.parse(saved);
     if (!Array.isArray(parsed)) {
-      throw new Error("Your saved bag has an invalid format. Clear it to continue.");
+      throw new Error(
+        "Your saved basket has an invalid format. Clear it to continue."
+      );
     }
 
     const quantities = new Map();
@@ -112,7 +114,7 @@
       ) {
         quantities.set(
           item.productId,
-          (quantities.get(item.productId) || 0) + item.quantity,
+          (quantities.get(item.productId) || 0) + item.quantity
         );
       }
     });
@@ -165,7 +167,8 @@
     readCart,
     addToCart,
     updateQuantity,
-    itemCount: () => readCart().reduce((total, item) => total + item.quantity, 0),
+    itemCount: () =>
+      readCart().reduce((total, item) => total + item.quantity, 0),
     formatPrice: (amount) =>
       new Intl.NumberFormat("en-GB", {
         style: "currency",

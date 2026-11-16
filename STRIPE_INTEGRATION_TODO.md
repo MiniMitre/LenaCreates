@@ -34,7 +34,7 @@
 - The Centrepiece is available for £5 in the shop.
 - Other sample catalogue items have product detail pages but remain marked
   “Coming soon” until their real Stripe Prices and product details are set.
-- The bag stores multiple products and quantities in the browser. The Worker
+- The basket stores multiple products and quantities in the browser. The Worker
   only accepts product IDs with a configured `PRICE_<PRODUCT_ID>` binding;
   it does not trust prices or Stripe Price IDs sent by the browser.
 - The Worker creates one Stripe-hosted Checkout Session with a line item for
@@ -46,18 +46,18 @@
 ## Flow
 
 Shop cards open [product/index.html](product/index.html) with the selected
-product ID. The product page adds eligible products to the bag stored in
-`localStorage`. [checkout/index.html](checkout/index.html) lists the bag and
+product ID. The product page adds eligible products to the basket stored in
+`localStorage`. [checkout/index.html](checkout/index.html) lists the basket and
 lets the customer adjust quantities. It sends product IDs and quantities to
 the Cloudflare Worker, which resolves configured Stripe Price IDs and
 redirects to Stripe-hosted Checkout.
 
 ## Project files
 
-- [store.js](store.js) — product catalogue and browser shopping bag.
+- [store.js](store.js) — product catalogue and browser shopping basket.
 - [shop/shop.js](shop/shop.js) — renders clickable shop cards.
-- [product/product.js](product/product.js) — product detail and add-to-bag.
-- [checkout/checkout.js](checkout/checkout.js) — bag management and Stripe redirect.
+- [product/product.js](product/product.js) — product detail and add-to-basket.
+- [checkout/checkout.js](checkout/checkout.js) — basket management and Stripe redirect.
 - [worker/src/index.js](worker/src/index.js) — validates cart and creates the
   Stripe Checkout Session.
 - [worker/wrangler.toml](worker/wrangler.toml) — Worker settings and public

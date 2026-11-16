@@ -92,7 +92,7 @@ export default {
       requestBody.items.length < 1 ||
       requestBody.items.length > 100
     ) {
-      return jsonResponse({ error: "Your bag is empty or invalid." }, 400, corsHeaders);
+      return jsonResponse({ error: "Your basket is empty or invalid." }, 400, corsHeaders);
     }
 
     const quantities = new Map();
@@ -105,12 +105,12 @@ export default {
         item.quantity < 1 ||
         item.quantity > 99
       ) {
-        return jsonResponse({ error: "Your bag contains an invalid item." }, 400, corsHeaders);
+        return jsonResponse({ error: "Your basket contains an invalid item." }, 400, corsHeaders);
       }
 
       if (!configuredPrices.has(item.productId)) {
         return jsonResponse(
-          { error: "Your bag contains a product that is not configured for checkout." },
+          { error: "Your basket contains a product that is not configured for checkout." },
           400,
           corsHeaders,
         );

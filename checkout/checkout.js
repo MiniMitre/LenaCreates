@@ -12,7 +12,7 @@ function renderCart() {
   try {
     const items = window.Store.readCart();
     if (!items.length) {
-      checkoutStatus.textContent = "Your bag is empty.";
+      checkoutStatus.textContent = "Your basket is empty.";
       cartSubtotal.textContent = window.Store.formatPrice(0);
       return;
     }
@@ -46,7 +46,7 @@ function renderCart() {
       decrease.textContent = "−";
       decrease.setAttribute("aria-label", `Remove one ${product.name}`);
       decrease.addEventListener("click", () =>
-        window.Store.updateQuantity(item.productId, item.quantity - 1),
+        window.Store.updateQuantity(item.productId, item.quantity - 1)
       );
       const quantityText = document.createElement("span");
       quantityText.textContent = String(item.quantity);
@@ -55,7 +55,7 @@ function renderCart() {
       increase.textContent = "+";
       increase.setAttribute("aria-label", `Add one ${product.name}`);
       increase.addEventListener("click", () =>
-        window.Store.updateQuantity(item.productId, item.quantity + 1),
+        window.Store.updateQuantity(item.productId, item.quantity + 1)
       );
       quantity.append(decrease, quantityText, increase);
       row.append(image, details, quantity);
@@ -65,9 +65,9 @@ function renderCart() {
     cartSubtotal.textContent = window.Store.formatPrice(subtotal);
     checkoutButton.disabled = false;
   } catch (error) {
-    console.error("Could not read the shopping bag.", error);
+    console.error("Could not read the shopping basket.", error);
     checkoutStatus.textContent =
-      error instanceof Error ? error.message : "Could not read your bag.";
+      error instanceof Error ? error.message : "Could not read your basket.";
   }
 }
 
@@ -98,7 +98,7 @@ async function startCheckout() {
     if (!response.ok || !data || typeof data.url !== "string") {
       throw new Error(
         (data && typeof data.error === "string" && data.error) ||
-          "Could not start checkout. Please try again.",
+          "Could not start checkout. Please try again."
       );
     }
 

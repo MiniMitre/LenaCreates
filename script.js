@@ -7,10 +7,10 @@ filters.forEach((button) =>
       product.classList.toggle(
         "hidden",
         button.dataset.filter !== "all" &&
-          product.dataset.category !== button.dataset.filter,
+          product.dataset.category !== button.dataset.filter
       );
     });
-  }),
+  })
 );
 
 function updateCartCount() {
@@ -19,7 +19,7 @@ function updateCartCount() {
   try {
     cartCount.textContent = String(window.Store.itemCount());
   } catch (error) {
-    console.error("Could not update the bag count.", error);
+    console.error("Could not update the basket count.", error);
   }
 }
 
